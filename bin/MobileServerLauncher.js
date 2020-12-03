@@ -12,6 +12,9 @@ let config = API_HUB.getServerConfig();
 const listeningPort = Number.parseInt(config.port);
 const rootFolder = path.resolve(config.storage);
 
+console.log(`\n[${TAG}] Root folder is: ${rootFolder} \n`);
+console.log(`\n[${TAG}] Port is: ${listeningPort} \n`);
+
 API_HUB.createInstance(listeningPort, rootFolder, (err) => {
     if (err) {
         console.error(err);
